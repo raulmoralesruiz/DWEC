@@ -1,0 +1,10 @@
+https://developer.mozilla.org/es/docs/Web/API/Node/textContent#:~:text=Diferencias%20con%20innerText&text=Note%20que%20mientras%20textContent%20lee,que%20textContent%20s%C3%AD%20lo%20har%C3%A1.
+
+Diferencias con innerHTML
+innerHTML devuelve el HTML como su nombre indica.
+
+ Con bastante frecuencia, para leer o escribir texto en un elemento, la gente usa innerHTML.
+ textContent debería usarse en su lugar.
+
+ Ya que el texto no es procesado es más probable que tenga mejor rendimiento.
+ Además, esto evita un vector de ataques XSS

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>repaso1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <legend align="center">Liga BBVA. Clasificación</legend>
+    <table id="teams" align="center">
+        <tr>
+            <td style="text-align: center;">Posición</td>
+            <td style="text-align: center;">Equipo</td>
+            <td style="text-align: center;">Puntos</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>FC Barcelona</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Real Madrid</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>At. Madrid</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Sevilla FC</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <div id="botones">
+        Posición:
+        <input type="number" name="pos" id="pos">
+        Equipo:
+        <input type="text" name="team" id="team">
+        Puntos:
+        <input type="number" name="points" id="points">
+        
+        <input type="button" name="aplicar" id="but_aplicar" value="aplicar" onclick="agregarEquipo()">
+    </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
+</html>

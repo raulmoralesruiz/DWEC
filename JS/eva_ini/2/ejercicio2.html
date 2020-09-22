@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RMR - Ejercicio 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h3 id="num-emp">x</h1>
+
+    <table id="tabla-emp" border="1">
+        <tr>
+            <td>Número de empleado</td>
+            <td>DNI</td>
+            <td>Nombre</td>
+            <td>Apellidos</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="dniEmp">77332344K</td>
+            <td>María</td>
+            <td>Pérez Izquierdo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="dniEmp">23445677J</td>
+            <td>Javier</td>
+            <td>López Martínez</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td class="dniEmp">12345678H</td>
+            <td>Manuel</td>
+            <td>Sánchez Martos</td>
+        </tr>
+    </table>
+
+
+    <table id="tabla-botones">
+        <tr>
+            <td> <input type="button" name="bt-add" id="bt-add" value="Añadir" onclick="insertar()"> </td>
+            <td> <input type="button" name="bt-del" id="bt-del" value="Borrar" onclick="borrar()"> </td>
+            <td> <input type="button" name="bt-mod" id="bt-mod" value="Modificar" onclick="modificar()"> </td>
+        </tr>
+    </table>
+
+    
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

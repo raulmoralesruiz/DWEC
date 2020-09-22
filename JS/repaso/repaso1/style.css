@@ -1,0 +1,17 @@
+table, tr, th, td {
+    border: 1px solid #000;
+}
+
+table {
+    width: 70%;
+}
+
+td {
+    padding: 10px;
+}
+
+#botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,13 @@
+/* body {
+    text-align: center;
+} */
+
+#tabla-emp {
+    border: solid black 1px;
+    text-align: center;
+
+}
+
+td {
+    padding: 5px;
+}
