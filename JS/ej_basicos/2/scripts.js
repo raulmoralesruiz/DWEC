@@ -26,9 +26,12 @@ caja.addEventListener("mouseup", () => {
 
 
 // Al pulsar una tecla deberá aparecer el mensaje por consola “Has pulsado una tecla”
-text.addEventListener("keypress", () => {
-    let codigo = event.which || event.keyCode;
-    console.log("Has pulsado una tecla: " + String.fromCharCode(codigo));
+text.addEventListener("keypress", (e) => {
+    // let codigo = event.which || event.keyCode;
+    // console.log("Has pulsado una tecla: " + String.fromCharCode(codigo));
+
+    let codigo = e.key;
+    console.log("Has pulsado una tecla: " + codigo)
 });
 
 // Al soltar la tecla deberá aparecer el mensaje por consola “Has soltado una tecla”
