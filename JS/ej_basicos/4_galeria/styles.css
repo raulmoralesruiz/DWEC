@@ -3,22 +3,22 @@
     width: 70%;
 }
 
-.gallery__item {
-    background-color: aqua;
+.gallery_item {
     width: 25%;
     border: 1px solid black;
     margin: 10px 10px;
     text-align: center;
     display: inline-block;
     padding: 15px; 
+    background: aqua;
 }
 
-.gallery__itemYellow {
-    background-color: yellow;
+.gallery_item_yellow {
     width: 25%;
     border: 1px solid black;
     margin: 10px 10px;
     text-align: center;
     display: inline-block;
-    padding: 15px; 
+    padding: 15px;
+    background: yellow;
 }
