@@ -1,0 +1,87 @@
+#general {
+    width: 95%;
+    height: 650px;
+    background-color: greenyellow;
+    display: flex;
+    padding: 10px;
+}
+
+
+/* --- JUGADOR --- */
+#jugador {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    height: 550px;
+    background-color: green;
+    padding: 10px;
+}
+
+#jug_mazo {
+    width: 50%;
+    height: 350px;
+    background-color: coral;
+}
+
+#img_mazo_jug {
+    max-width: 70%;
+    height: auto;  
+}
+
+#jug_nueva_carta {
+    width: 50%;
+    height: 350px;
+    background-color: brown;
+}
+
+#img_nueva_carta_jug {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* vertical-align: middle; */
+}
+
+#jug_cartas {
+    width: 100%;
+    height: 200px;
+    background-color: darkslategrey;
+}
+
+.img_cartas_jug {
+    margin-top: 20px;
+    max-width: 15%;
+    height: auto;
+    padding: 10px;
+} 
+/* --- JUGADOR --- */
+
+
+/* ---- BANCA ---- */
+#banca {
+    display: flex;
+    flex-flow: row wrap;
+    width: 50%;
+    height: 550px;
+    background-color: aqua;
+    padding: 10px;
+}
+
+#ban_mazo {
+    width: 50%;
+    height: 350px;
+    background-color: coral;
+}
+
+#ban_nueva_carta {
+    width: 50%;
+    height: 350px;
+    background-color: brown;
+}
+
+#ban_cartas {
+    width: 100%;
+    height: 200px;
+    background-color: darkslategrey;
+}
+/* ---- BANCA ---- */
