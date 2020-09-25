@@ -1,7 +1,13 @@
+const reiniciar = document.getElementById('bot_reiniciar');
+
+reiniciar.addEventListener('click', (e) => {
+    location.reload();
+});
+
+
 const mazoJug = document.getElementById('img_mazo_jug');
 const nuevaCarta = document.getElementById('img_nueva_carta_jug');
-
-const valor_carta_especial = 0.5;
+const div_puntos_jugador = document.getElementById('valor_puntos_jugador');
 
 
 // Se define un array con los palos de la baraja
@@ -92,6 +98,8 @@ function cartaRandom() {
 
         // Se incrementa la puntuación del jugador
         puntos_jugador += valorCarta;
+
+        div_puntos_jugador.textContent = `${puntos_jugador} puntos`
 
         console.log("puntos_jugador:");
         console.log(puntos_jugador);
