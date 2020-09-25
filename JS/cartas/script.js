@@ -15,7 +15,7 @@ let mazo = [];
 
 // Se define el historial de cartas del jugador
 let historial_jugador = [];
-
+let puntos_jugador = 0;
 
 
 // Crear array con todas las cartas -> 40 (10 de cada palo).
@@ -64,7 +64,7 @@ function cartaRandom() {
         // Sacamos la carta del mazo (array)
         // splice -> primer valor, indice a eliminar. segundo valor, cantidad
         let carta = mazo.splice(posCartaEnMazo, 1);
-    
+
         // Mostramos la carta en el sitio indicado -> carta actual del jugador
         nuevaCarta.src = `imagenes/${carta}`;
 
@@ -73,8 +73,29 @@ function cartaRandom() {
 
         // Se inserta la carta en el historial del jugador
         document.getElementById(`img_cartajug_${historial_jugador.length}`).src = `imagenes/${carta}`;
+
+
+        // Se extrae el digito de la carta
+        let digitoCarta = parseInt(carta);
+        let valorCarta = 0;
+
+        // Se guarda el valor de la carta
+        if (digitoCarta >= 8) {
+            valorCarta = 0.5;
+        } else {
+            valorCarta = digitoCarta;
+        }
+
+        console.log("valorCarta:");
+        console.log(valorCarta);
+
+
+        // Se incrementa la puntuación del jugador
+        puntos_jugador += valorCarta;
+
+        console.log("puntos_jugador:");
+        console.log(puntos_jugador);
+
     }
 
-    console.log(historial_jugador);
 }
-
