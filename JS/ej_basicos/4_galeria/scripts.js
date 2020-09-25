@@ -17,13 +17,13 @@ galeria.addEventListener('click', (e) => {
         //se elimina gallery_item
         clase.remove('gallery_item');
 
-        //se añade gallery_item_yellow
-        clase.add('gallery_item_yellow');
+        //se añade gallery_yellow
+        clase.add('gallery_yellow');
         
-    //si la clase es gallery_item_yellow
+    //si la clase es gallery_yellow
     } else {
-        //se elimina gallery_item_yellow
-        clase.remove('gallery_item_yellow');
+        //se elimina gallery_yellow
+        clase.remove('gallery_yellow');
 
         //se añade gallery_item
         clase.add('gallery_item');
@@ -32,20 +32,15 @@ galeria.addEventListener('click', (e) => {
 
 
 
-// FORMA 2 - no funciona
+// FORMA 2
 // galeria.addEventListener('click', (e) => {
-
-//     console.log("antes: " + e.target.className);
-//     console.log("antes: " + e.target.classList);
 
 //     //e.preventDefault();
 //     if (e.target.className.match("gallery_item")) {
-//         e.target.classList.replace('gallery_item', 'gallery_item_yellow');
+//         e.target.classList.replace('gallery_item', 'gallery_yellow');
 //     }
 //     else{
-//         e.target.classList.replace('gallery_item_yellow', 'gallery_item');
+//         e.target.classList.replace('gallery_yellow', 'gallery_item');
 //     }
 
-//     console.log("despu: " + e.target.className);
-//     console.log("despu: " + e.target.classList);
 // })

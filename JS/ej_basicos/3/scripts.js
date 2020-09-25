@@ -11,7 +11,7 @@ const text = document.getElementById('texto');
 
 boton.addEventListener("click", () => {
 
-    text.addEventListener("keypress", (e) => {
+    text.addEventListener("keyup", (e) => {
         let letra = e.key;
         console.log("Has pulsado una tecla: " + letra)
     });
