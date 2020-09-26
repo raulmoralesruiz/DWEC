@@ -1,6 +1,6 @@
 #general {
     width: 95%;
-    height: 650px;
+    height: 570px;
     background-color: greenyellow;
     display: flex;
     padding: 10px;
@@ -58,7 +58,7 @@
 }
 
 #img_mazo_jug {
-    max-width: 70%;
+    max-width: 55%;
     height: auto;
 
     display: block;
@@ -89,7 +89,7 @@
 
 .img_cartas_jug {
     margin-top: 10px;
-    max-width: 15%;
+    max-width: 10%;
     height: auto;
     padding: 10px;
 } 
@@ -102,7 +102,8 @@
     flex-flow: row wrap;
     width: 50%;
     height: 550px;
-    background-color: aqua;
+    /* background-color: aqua; */
+    background-color: green;
     padding: 10px;
 }
 
@@ -110,13 +111,39 @@
     height: 50px;
     width: 100%;
     background-color: lightblue;
+    display: flex;
 }
 
+#texto_puntos_banca {
+    /* background-color: lightgreen; */
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#valor_puntos_banca {
+    /* background-color: lightslategray; */
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
 
 #ban_mazo {
     width: 50%;
     height: 350px;
     background-color: coral;
+}
+
+#img_mazo_ban {
+    max-width: 55%;
+    height: auto;
+
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #ban_nueva_carta {
@@ -125,9 +152,37 @@
     background-color: brown;
 }
 
+#img_nueva_carta_ban {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* vertical-align: middle; */
+}
+
 #ban_cartas {
     width: 100%;
     height: 150px;
     background-color: darkslategrey;
 }
+
+.img_cartas_ban {
+    margin-top: 10px;
+    max-width: 10%;
+    height: auto;
+    padding: 10px;
+} 
 /* ---- BANCA ---- */
+
+#footer {
+    width: 96%;
+    height: 70px;
+    /* background-color: cadetblue; */
+}
+
+#ganador {
+    /* width: 25%; */
+    text-align: center;
+    font-size: 30px;
+    /* background-color: aquamarine; */
+}
