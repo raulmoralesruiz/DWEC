@@ -8,12 +8,10 @@ reiniciar.addEventListener('click', (e) => {
 const mazoJug = document.getElementById('img_mazo_jug');
 const nuevaCartaJug = document.getElementById('img_nueva_carta_jug');
 const div_puntos_jugador = document.getElementById('valor_puntos_jugador');
-let mazoJugActivo = true;
 
 const mazoBan = document.getElementById('img_mazo_ban');
 const nuevaCartaBan = document.getElementById('img_nueva_carta_ban');
 const div_puntos_banca = document.getElementById('valor_puntos_banca');
-
 
 const plantarse = document.getElementById('bot_plantarse');
 const ganador = document.getElementById('ganador');
@@ -32,6 +30,8 @@ let mazo = [];
 // Se define el historial de cartas del jugador
 let historial_jugador = [];
 let puntos_jugador = 0;
+
+let juegoFinalizado = false;
 
 
 // Crear array con todas las cartas -> 40 (10 de cada palo).
@@ -60,7 +60,9 @@ mazoJug.addEventListener('click', (e) => {
 
     if (puntos_jugador > 7.5) {
         ganador.textContent = `Ganador: BANCA`;
-        contador_jugadas = 7;
+        // contador_jugadas = 7;
+        contador_jugadas = limite_jugadas;
+        juegoFinalizado = true;
     }
 });
 
@@ -81,7 +83,6 @@ function cartaRandom() {
     if (mazo.length <= 0) {
         alert("No quedan cartas en el mazo.")
     } else {
-
         // Obtenemos la posición de la carta en el array (mazo)
         let posCartaEnMazo = numRandom(0, (mazo.length - 1));
 
@@ -125,62 +126,86 @@ let puntos_banca = 0;
 
 
 plantarse.addEventListener('click', (e) => {
-    // alert("El jugador se ha plantado");
 
-    
-    //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
-        // mazoJug.addEventListener('click', (e) => {
-        // });
-
-        // mazoJug.removeEventListener('click', (e), true);
-
-
-    // Se comprueba si hay cartas en el mazo
-    if (mazo.length <= 0) {
-        alert("No quedan cartas en el mazo.")
+    if (contador_jugadas == 0) {
+        alert("El jugador no puede plantarse sin jugar.");
     } else {
+        if (juegoFinalizado == false) {        
 
-        while (puntos_banca <= puntos_jugador) {
-
-            // Obtenemos la posición de la carta en el array (mazo)
-            let posCartaEnMazo = numRandom(0, (mazo.length - 1));
-
-            // Sacamos la carta del mazo (array)
-            // splice -> primer valor, indice a eliminar. segundo valor, cantidad
-            let carta = mazo.splice(posCartaEnMazo, 1);
-
-            // Mostramos la carta en el sitio indicado -> carta actual del jugador
-            nuevaCartaBan.src = `imagenes/${carta}`;
-
-            // Se agrega la carta al array historial del jugador
-            historial_banca.push(carta);
-
-            // Se inserta la carta en el historial del jugador
-            document.getElementById(`img_cartaban_${historial_banca.length}`).src = `imagenes/${carta}`;
-
-
-            // Se extrae el digito de la carta
-            let digitoCarta = parseInt(carta);
-            let valorCarta = 0;
-
-            // Se guarda el valor de la carta
-            if (digitoCarta >= 8) {
-                valorCarta = 0.5;
+            //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
+            contador_jugadas = limite_jugadas;
+            // contador_jugadas = 7;
+    
+            // Se comprueba si hay cartas en el mazo
+            if (mazo.length <= 0) {
+                alert("No quedan cartas en el mazo.")
             } else {
-                valorCarta = digitoCarta;
+    
+                while (puntos_banca <= puntos_jugador) {
+    
+                    // Obtenemos la posición de la carta en el array (mazo)
+                    let posCartaEnMazo = numRandom(0, (mazo.length - 1));
+    
+                    // Sacamos la carta del mazo (array)
+                    // splice -> primer valor, indice a eliminar. segundo valor, cantidad
+                    let carta = mazo.splice(posCartaEnMazo, 1);
+    
+                    // Mostramos la carta en el sitio indicado -> carta actual del jugador
+                    nuevaCartaBan.src = `imagenes/${carta}`;
+    
+                    // Se agrega la carta al array historial del jugador
+                    historial_banca.push(carta);
+    
+                    // Se inserta la carta en el historial del jugador
+                    document.getElementById(`img_cartaban_${historial_banca.length}`).src = `imagenes/${carta}`;
+    
+    
+                    // Se extrae el digito de la carta. (valores entre 1 y 10)
+                    let digitoCarta = parseInt(carta);
+                    let valorCarta = 0;
+    
+                    // Se guarda el valor de la carta
+                    if (digitoCarta >= 8) {
+                        valorCarta = 0.5;
+                    } else {
+                        valorCarta = digitoCarta;
+                    }
+    
+                    // Se incrementa la puntuación del jugador
+                    puntos_banca += valorCarta;
+                    div_puntos_banca.textContent = `${puntos_banca} puntos`;
+                }
+    
+                // if (puntos_banca > 7.5) {
+                //     ganador.textContent = `Ganador: JUGADOR`;
+                // } else {
+                //     ganador.textContent = `Ganador: BANCA`;
+                // }
+    
+                if ((puntos_banca >= puntos_jugador) && (puntos_banca <= 7.5)) {
+                    ganador.textContent = `Ganador: BANCA`;
+                    juegoFinalizado = true;
+                } else {
+                    ganador.textContent = `Ganador: JUGADOR`;
+                    juegoFinalizado = true;
+                }
             }
-
-            // Se incrementa la puntuación del jugador
-            puntos_banca += valorCarta;
-            div_puntos_banca.textContent = `${puntos_banca} puntos`;
-        }
-
-        if (puntos_banca > 7.5) {
-            ganador.textContent = `Ganador: JUGADOR`;
+    
         } else {
-            ganador.textContent = `Ganador: BANCA`;
+            alert("El juego ya ha finalizado.");
         }
-
     }
 
 });
+
+
+
+/* Apuntes.
+
+Si el jugador se pasa (y pierde), el juego debe finalizar.
+Por lo tanto, el botón de plantarse no debe funcionar.
+
+Si el jugador se planta, y la banca ya ha ganado, el juego debe finalizar.
+Por lo tanto, el botón de plantarse no debe funcionar.
+
+*/

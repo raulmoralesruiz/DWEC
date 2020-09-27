@@ -1,7 +1,7 @@
 #general {
     width: 95%;
     height: 570px;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     display: flex;
     padding: 10px;
 }
@@ -12,7 +12,7 @@
     flex-flow: row wrap;
     width: 50%;
     height: 550px;
-    background-color: green;
+    background-color: black;
     padding: 10px;
 }
 
@@ -60,11 +60,15 @@
 #img_mazo_jug {
     max-width: 55%;
     height: auto;
-
     display: block;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#img_mazo_jug:hover {
+    margin-top: 20px;
+    max-width: 60%;
 }
 
 #jug_nueva_carta {
@@ -103,7 +107,7 @@
     width: 50%;
     height: 550px;
     /* background-color: aqua; */
-    background-color: green;
+    background-color: black;
     padding: 10px;
 }
 
