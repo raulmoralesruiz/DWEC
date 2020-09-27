@@ -1,3 +1,7 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
 #general {
     width: 95%;
     height: 570px;
@@ -12,14 +16,14 @@
     flex-flow: row wrap;
     width: 50%;
     height: 550px;
-    background-color: black;
+    /* background-color: black; */
     padding: 10px;
 }
 
 #menu_jugador {
     height: 50px;
     width: 100%;
-    background-color: lightblue;
+    background-color: #b7e4c7;
     display: flex;
 }
 
@@ -54,7 +58,8 @@
 #jug_mazo {
     width: 50%;
     height: 350px;
-    background-color: coral;
+    /* background-color: coral; */
+    background-color: #74c69d;
 }
 
 #img_mazo_jug {
@@ -74,7 +79,7 @@
 #jug_nueva_carta {
     width: 50%;
     height: 350px;
-    background-color: brown;
+    background-color: #52b788;
 }
 
 #img_nueva_carta_jug {
@@ -83,12 +88,14 @@
     margin-left: auto;
     margin-right: auto;
     /* vertical-align: middle; */
+    max-width: 100%;
 }
 
 #jug_cartas {
     width: 100%;
     height: 150px;
-    background-color: darkslategrey;
+    /* background-color: darkslategrey; */
+    background-color: #2d6a4f;
 }
 
 .img_cartas_jug {
@@ -106,15 +113,14 @@
     flex-flow: row wrap;
     width: 50%;
     height: 550px;
-    /* background-color: aqua; */
-    background-color: black;
+    /* background-color: black; */
     padding: 10px;
 }
 
 #menu_banca {
     height: 50px;
     width: 100%;
-    background-color: lightblue;
+    background-color: #e4b1ab;
     display: flex;
 }
 
@@ -137,7 +143,8 @@
 #ban_mazo {
     width: 50%;
     height: 350px;
-    background-color: coral;
+    /* background-color: coral; */
+    background-color: #dd807e;
 }
 
 #img_mazo_ban {
@@ -153,7 +160,8 @@
 #ban_nueva_carta {
     width: 50%;
     height: 350px;
-    background-color: brown;
+    /* background-color: brown; */
+    background-color: #dd6969;
 }
 
 #img_nueva_carta_ban {
@@ -167,7 +175,8 @@
 #ban_cartas {
     width: 100%;
     height: 150px;
-    background-color: darkslategrey;
+    /* background-color: darkslategrey; */
+    background-color: #D84846;
 }
 
 .img_cartas_ban {
@@ -182,11 +191,23 @@
     width: 96%;
     height: 70px;
     /* background-color: cadetblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #ganador {
-    /* width: 25%; */
+    width: 25%;
     text-align: center;
     font-size: 30px;
     /* background-color: aquamarine; */
+    color: black;
+}
+
+.ganadorBanca {
+    background-color: #dd6969;
+}
+
+.ganadorJugador {
+    background-color: #52b788;
 }

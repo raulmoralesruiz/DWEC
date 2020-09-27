@@ -31,6 +31,7 @@ let mazo = [];
 let historial_jugador = [];
 let puntos_jugador = 0;
 
+// Variable que indicará el estado del juego (finalizado o no)
 let juegoFinalizado = false;
 
 
@@ -46,27 +47,32 @@ for (let p = 0; p < palos.length; p++) {
 
 }
 
-
+// Se define un máximo de jugadas para el jugador
 let contador_jugadas = 0;
 let limite_jugadas = 7;
 
 mazoJug.addEventListener('click', (e) => {
-    if (contador_jugadas < limite_jugadas) {
-        cartaRandom();
-        contador_jugadas += 1;
+
+    if (juegoFinalizado == false) {
+
+        if (contador_jugadas < limite_jugadas) {
+            cartaRandom();
+            contador_jugadas += 1;
+        } else {
+            alert("Se ha alcanzado el máximo de jugadas posibles.");
+        }
+    
+        if (puntos_jugador > 7.5) {
+            ganador.textContent = `Ganador: BANCA`;
+            ganador.classList.add('ganadorBanca');
+            juegoFinalizado = true;
+        }
+
     } else {
-        alert("Se ha alcanzado el máximo de jugadas posibles.");
+        alert("El juego ya ha finalizado.");
     }
 
-    if (puntos_jugador > 7.5) {
-        ganador.textContent = `Ganador: BANCA`;
-        // contador_jugadas = 7;
-        contador_jugadas = limite_jugadas;
-        juegoFinalizado = true;
-    }
 });
-
-
 
 
 
@@ -120,7 +126,7 @@ function cartaRandom() {
 
 
 
-// Se define el historial de cartas del jugador
+// Se define el historial de cartas de la banca
 let historial_banca = [];
 let puntos_banca = 0;
 
@@ -134,7 +140,6 @@ plantarse.addEventListener('click', (e) => {
 
             //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
             contador_jugadas = limite_jugadas;
-            // contador_jugadas = 7;
     
             // Se comprueba si hay cartas en el mazo
             if (mazo.length <= 0) {
@@ -147,7 +152,7 @@ plantarse.addEventListener('click', (e) => {
                     let posCartaEnMazo = numRandom(0, (mazo.length - 1));
     
                     // Sacamos la carta del mazo (array)
-                    // splice -> primer valor, indice a eliminar. segundo valor, cantidad
+                    // splice -> primer valor, indice a eliminar. Segundo valor, cantidad
                     let carta = mazo.splice(posCartaEnMazo, 1);
     
                     // Mostramos la carta en el sitio indicado -> carta actual del jugador
@@ -184,9 +189,11 @@ plantarse.addEventListener('click', (e) => {
     
                 if ((puntos_banca >= puntos_jugador) && (puntos_banca <= 7.5)) {
                     ganador.textContent = `Ganador: BANCA`;
+                    ganador.classList.add('ganadorBanca');
                     juegoFinalizado = true;
                 } else {
                     ganador.textContent = `Ganador: JUGADOR`;
+                    ganador.classList.add('ganadorJugador');
                     juegoFinalizado = true;
                 }
             }
@@ -201,11 +208,9 @@ plantarse.addEventListener('click', (e) => {
 
 
 /* Apuntes.
-
 Si el jugador se pasa (y pierde), el juego debe finalizar.
 Por lo tanto, el botón de plantarse no debe funcionar.
 
 Si el jugador se planta, y la banca ya ha ganado, el juego debe finalizar.
 Por lo tanto, el botón de plantarse no debe funcionar.
-
 */
