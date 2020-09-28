@@ -16,6 +16,9 @@ const div_puntos_banca = document.getElementById('valor_puntos_banca');
 const plantarse = document.getElementById('bot_plantarse');
 const ganador = document.getElementById('ganador');
 
+const tablero_banca = document.getElementById('banca');
+const tablero_jugador = document.getElementById('jugador');
+
 
 
 // Se define un array con los palos de la baraja
@@ -53,6 +56,8 @@ let limite_jugadas = 7;
 
 mazoJug.addEventListener('click', (e) => {
 
+    tablero_jugador.classList.add('jugador_activa');
+    
     if (juegoFinalizado == false) {
 
         if (contador_jugadas < limite_jugadas) {
@@ -133,11 +138,18 @@ let puntos_banca = 0;
 
 plantarse.addEventListener('click', (e) => {
 
+    tablero_jugador.classList.remove('jugador_activa');
+    tablero_banca.classList.add('banca_activa');
+
     if (contador_jugadas == 0) {
         alert("El jugador no puede plantarse sin jugar.");
     } else {
-        if (juegoFinalizado == false) {        
+        if (juegoFinalizado == false) {
 
+            // setTimeout(funcion_a_ejecutar, milisegundos);
+
+
+            
             //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
             contador_jugadas = limite_jugadas;
     

@@ -5,7 +5,6 @@ body {
 #general {
     width: 95%;
     height: 570px;
-    /* background-color: greenyellow; */
     display: flex;
     padding: 10px;
 }
@@ -16,8 +15,12 @@ body {
     flex-flow: row wrap;
     width: 50%;
     height: 550px;
-    /* background-color: black; */
     padding: 10px;
+    border-radius: 6px;
+}
+
+.jugador_activa {
+    background-color: #24533e;
 }
 
 #menu_jugador {
@@ -25,22 +28,23 @@ body {
     width: 100%;
     background-color: #b7e4c7;
     display: flex;
+    border-radius: 6px;
 }
 
 #texto_puntos_jugador {
-    /* background-color: lightgreen; */
     width: 25%;
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
+    font-weight: 600;
 }
 
 #valor_puntos_jugador {
-    /* background-color: lightslategray; */
     width: 25%;
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
+    font-weight: 600;
 }
 
 .div_botones {
@@ -53,13 +57,25 @@ body {
     margin-top: 10px;
     width: 70%;
     font-size: 15px;
+    padding: 5px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #74c69d;
+    border-radius: 6px;
+    border: 2px solid #52b788;
 }
+.botones:hover {
+    color: #52b788;
+    background-color: #ffffff;
+}
+
 
 #jug_mazo {
     width: 50%;
     height: 350px;
-    /* background-color: coral; */
     background-color: #74c69d;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 #img_mazo_jug {
@@ -80,6 +96,8 @@ body {
     width: 50%;
     height: 350px;
     background-color: #52b788;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 #img_nueva_carta_jug {
@@ -87,15 +105,14 @@ body {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    /* vertical-align: middle; */
     max-width: 100%;
 }
 
 #jug_cartas {
     width: 100%;
     height: 150px;
-    /* background-color: darkslategrey; */
     background-color: #2d6a4f;
+    border-radius: 6px;
 }
 
 .img_cartas_jug {
@@ -113,8 +130,12 @@ body {
     flex-flow: row wrap;
     width: 50%;
     height: 550px;
-    /* background-color: black; */
     padding: 10px;
+    border-radius: 6px;
+}
+
+.banca_activa {
+    background-color: #a73735;    
 }
 
 #menu_banca {
@@ -122,35 +143,36 @@ body {
     width: 100%;
     background-color: #e4b1ab;
     display: flex;
+    border-radius: 6px;
 }
 
 #texto_puntos_banca {
-    /* background-color: lightgreen; */
     width: 25%;
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
+    font-weight: 600;
 }
 
 #valor_puntos_banca {
-    /* background-color: lightslategray; */
     width: 25%;
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
+    font-weight: 600;
 }
 
 #ban_mazo {
     width: 50%;
     height: 350px;
-    /* background-color: coral; */
     background-color: #dd807e;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 #img_mazo_ban {
     max-width: 55%;
     height: auto;
-
     display: block;
     margin-top: 30px;
     margin-left: auto;
@@ -160,8 +182,9 @@ body {
 #ban_nueva_carta {
     width: 50%;
     height: 350px;
-    /* background-color: brown; */
     background-color: #dd6969;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 #img_nueva_carta_ban {
@@ -169,14 +192,13 @@ body {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    /* vertical-align: middle; */
 }
 
 #ban_cartas {
     width: 100%;
     height: 150px;
-    /* background-color: darkslategrey; */
     background-color: #D84846;
+    border-radius: 6px;
 }
 
 .img_cartas_ban {
@@ -187,10 +209,11 @@ body {
 } 
 /* ---- BANCA ---- */
 
+
+/* ---- GANADOR ---- */
 #footer {
     width: 96%;
     height: 70px;
-    /* background-color: cadetblue; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,8 +223,8 @@ body {
     width: 25%;
     text-align: center;
     font-size: 30px;
-    /* background-color: aquamarine; */
     color: black;
+    font-weight: 600;
 }
 
 .ganadorBanca {
@@ -211,3 +234,4 @@ body {
 .ganadorJugador {
     background-color: #52b788;
 }
+/* ---- GANADOR ---- */
