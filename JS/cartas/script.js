@@ -1,23 +1,26 @@
+// botones. reiniciar y plantarse
 const reiniciar = document.getElementById('bot_reiniciar');
+const plantarse = document.getElementById('bot_plantarse');
 
+
+// funcionamiento del botón reiniciar
 reiniciar.addEventListener('click', (e) => {
     location.reload();
 });
 
 
+// constantes para las secciones: jugador, banca y ganador
+const tablero_jugador = document.getElementById('jugador');
 const mazoJug = document.getElementById('img_mazo_jug');
 const nuevaCartaJug = document.getElementById('img_nueva_carta_jug');
 const div_puntos_jugador = document.getElementById('valor_puntos_jugador');
 
+const tablero_banca = document.getElementById('banca');
 const mazoBan = document.getElementById('img_mazo_ban');
 const nuevaCartaBan = document.getElementById('img_nueva_carta_ban');
 const div_puntos_banca = document.getElementById('valor_puntos_banca');
 
-const plantarse = document.getElementById('bot_plantarse');
 const ganador = document.getElementById('ganador');
-
-const tablero_banca = document.getElementById('banca');
-const tablero_jugador = document.getElementById('jugador');
 
 
 
@@ -50,16 +53,19 @@ for (let p = 0; p < palos.length; p++) {
 
 }
 
-// Se define un máximo de jugadas para el jugador
+// Se define un máximo de jugadas y contador para el jugador
 let contador_jugadas = 0;
 let limite_jugadas = 7;
 
 mazoJug.addEventListener('click', (e) => {
 
+    // se agrega borde al tablero del jugador (mientras el usuario juega)
     tablero_jugador.classList.add('jugador_activa');
     
+    // se comprueba si el juego ha terminado
     if (juegoFinalizado == false) {
 
+        // si no ha terminado el turno del jugador.
         if (contador_jugadas < limite_jugadas) {
             cartaRandom();
             contador_jugadas += 1;
@@ -67,13 +73,17 @@ mazoJug.addEventListener('click', (e) => {
             alert("Se ha alcanzado el máximo de jugadas posibles.");
         }
     
+        // si el jugador se pasa del límite de puntos
         if (puntos_jugador > 7.5) {
+
+            // gana la banca y termina el juego
             ganador.textContent = `Ganador: BANCA`;
             ganador.classList.add('ganadorBanca');
             juegoFinalizado = true;
         }
 
     } else {
+        // si el juego ha finalizado, se muestra el aviso.
         alert("El juego ya ha finalizado.");
     }
 
@@ -138,17 +148,20 @@ let puntos_banca = 0;
 
 plantarse.addEventListener('click', (e) => {
 
+    // se elimina borde del tablero del jugador (su turno ha finalizado)
     tablero_jugador.classList.remove('jugador_activa');
+
+    // se agrega borde al tablero de la banca (mientras la banca juega)
     tablero_banca.classList.add('banca_activa');
 
+
+    // se comprueba si el usuario ha jugado al menos una vez
     if (contador_jugadas == 0) {
         alert("El jugador no puede plantarse sin jugar.");
     } else {
+
+        // si el juego no ha terminado...
         if (juegoFinalizado == false) {
-
-            // setTimeout(funcion_a_ejecutar, milisegundos);
-
-
             
             //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
             contador_jugadas = limite_jugadas;
@@ -158,6 +171,7 @@ plantarse.addEventListener('click', (e) => {
                 alert("No quedan cartas en el mazo.")
             } else {
     
+                // se reparten todas las cartas necesarias para la banca
                 while (puntos_banca <= puntos_jugador) {
     
                     // Obtenemos la posición de la carta en el array (mazo)
@@ -199,17 +213,24 @@ plantarse.addEventListener('click', (e) => {
                 //     ganador.textContent = `Ganador: BANCA`;
                 // }
     
+
+                // se comprueba quién es el ganador
                 if ((puntos_banca >= puntos_jugador) && (puntos_banca <= 7.5)) {
+                    
+                    // si la banca gana, se termina el juego y se muestra por pantalla
                     ganador.textContent = `Ganador: BANCA`;
                     ganador.classList.add('ganadorBanca');
                     juegoFinalizado = true;
                 } else {
+
+                    // si el jugador gana, se termina el juego y se muestra por pantalla
                     ganador.textContent = `Ganador: JUGADOR`;
                     ganador.classList.add('ganadorJugador');
                     juegoFinalizado = true;
                 }
             }
     
+        // si el juego ya ha terminado, se muestra el aviso
         } else {
             alert("El juego ya ha finalizado.");
         }
