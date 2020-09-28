@@ -134,6 +134,8 @@ function cartaRandom() {
 
         // Se incrementa la puntuación del jugador
         puntos_jugador += valorCarta;
+
+        // Se muestran los puntos del jugador en la posición correspondiente (div_puntos_jugador)
         div_puntos_jugador.textContent = `${puntos_jugador} puntos`;
     }
 }
@@ -205,14 +207,8 @@ plantarse.addEventListener('click', (e) => {
                     // Se incrementa la puntuación del jugador
                     puntos_banca += valorCarta;
                     div_puntos_banca.textContent = `${puntos_banca} puntos`;
-                }
-    
-                // if (puntos_banca > 7.5) {
-                //     ganador.textContent = `Ganador: JUGADOR`;
-                // } else {
-                //     ganador.textContent = `Ganador: BANCA`;
-                // }
-    
+                }    
+
 
                 // se comprueba quién es el ganador
                 if ((puntos_banca >= puntos_jugador) && (puntos_banca <= 7.5)) {
@@ -237,13 +233,3 @@ plantarse.addEventListener('click', (e) => {
     }
 
 });
-
-
-
-/* Apuntes.
-Si el jugador se pasa (y pierde), el juego debe finalizar.
-Por lo tanto, el botón de plantarse no debe funcionar.
-
-Si el jugador se planta, y la banca ya ha ganado, el juego debe finalizar.
-Por lo tanto, el botón de plantarse no debe funcionar.
-*/
