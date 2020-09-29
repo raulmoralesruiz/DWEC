@@ -8,6 +8,7 @@ body {
     width: 95%;
     height: 570px;
     display: flex;
+    /* flex-wrap: wrap; */
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -269,3 +270,289 @@ body {
     background-color: #dd6969;
 }
 /* ------------------------ GANADOR ------------------------ */
+
+
+
+
+
+
+@media (orientation: portrait) {
+    /* Aquí van todos los estilos CSS */
+
+    /* Contenedor padre. Contiene jugador y banca */
+    #general {
+        width: 95%;
+        height: 100%;
+        /* display: flex; */
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        /* background-color: chartreuse; */
+    }
+
+
+    /* ------------------------ JUGADOR ------------------------ */
+
+    /* Tablero del jugador */
+    #jugador {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        height: 550px;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    /* Borde activo mientras el usuario juega */
+    .jugador_activa {
+        background-color: #24533e;
+    }
+
+    /* Div que contiene texto y botones para el jugador */
+    #menu_jugador {
+        height: 50px;
+        width: 100%;
+        background-color: #b7e4c7;
+        display: flex;
+        border-radius: 6px;
+    }
+
+    /* Div que muestra -> Total jugador */
+    #texto_puntos_jugador {
+        width: 30%;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    /* Div que muestra los puntos actuales del jugador */
+    #valor_puntos_jugador {
+        width: 20%;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    /* Div que contiene los botones del jugador */
+    .div_botones {
+        width: 25%;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* Formato de los botones */
+    .botones {
+        margin-top: 10px;
+        width: 70%;
+        font-size: 15px;
+        padding: 5px;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: #74c69d;
+        border-radius: 6px;
+        border: 2px solid #52b788;
+    }
+
+    .botones:hover {
+        color: #52b788;
+        background-color: #ffffff;
+    }
+
+    /* Div que contiene el mazo del jugador (Pedir carta) */
+    #jug_mazo {
+        width: 50%;
+        height: 350px;
+        background-color: #74c69d;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    /* Formato de la imagen del mazo del jugador */
+    #img_mazo_jug {
+        max-width: 55%;
+        height: auto;
+        display: block;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #img_mazo_jug:hover {
+        margin-top: 20px;
+        max-width: 60%;
+    }
+
+    /* Div que contiene la carta actual del jugador */
+    #jug_nueva_carta {
+        width: 50%;
+        height: 350px;
+        background-color: #52b788;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    /* Formato de la carta actual del jugador */
+    #img_nueva_carta_jug {
+        display: block;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    /* Div que contiene el historial de cartas del jugador */
+    #jug_cartas {
+        width: 100%;
+        height: 150px;
+        background-color: #2d6a4f;
+        border-radius: 6px;
+    }
+
+    /* Formato de cada carta del historial del jugador */
+    .img_cartas_jug {
+        margin-top: 10px;
+        max-width: 10%;
+        height: auto;
+        padding: 10px;
+    }
+
+    /* ------------------------ JUGADOR ------------------------ */
+
+
+    /* ------------------------- BANCA ------------------------- */
+
+    /* Tablero de la banca */
+    #banca {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        height: 550px;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    /* Borde activo mientras la banca juega */
+    .banca_activa {
+        background-color: #a73735;
+    }
+
+    /* Div que contiene texto para la banca */
+    #menu_banca {
+        height: 50px;
+        width: 100%;
+        background-color: #e4b1ab;
+        display: flex;
+        border-radius: 6px;
+    }
+
+    /* Div que muestra -> Total banca */
+    #texto_puntos_banca {
+        width: 25%;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    /* Div que muestra los puntos actuales de la banca */
+    #valor_puntos_banca {
+        width: 25%;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+
+    /* Div que contiene el mazo de la banca (carta trasera) */
+    #ban_mazo {
+        width: 50%;
+        height: 350px;
+        background-color: #dd807e;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    /* Formato de la imagen del mazo de la banca */
+    #img_mazo_ban {
+        max-width: 55%;
+        height: auto;
+        display: block;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Div que contiene la carta actual de la banca */
+    #ban_nueva_carta {
+        width: 50%;
+        height: 350px;
+        background-color: #dd6969;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    /* Formato de la carta actual de la banca */
+    #img_nueva_carta_ban {
+        display: block;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Div que contiene el historial de cartas de la banca */
+    #ban_cartas {
+        width: 100%;
+        height: 150px;
+        background-color: #D84846;
+        border-radius: 6px;
+    }
+
+    /* Formato de cada carta del historial de la banca */
+    .img_cartas_ban {
+        margin-top: 10px;
+        max-width: 10%;
+        height: auto;
+        padding: 10px;
+    }
+
+    /* ------------------------- BANCA ------------------------- */
+
+
+    /* ------------------------ GANADOR ------------------------ */
+
+    /* Div padre para -> Div ganador */
+    #footer {
+        width: 96%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Div que muestra el ganador de la partida */
+    #ganador {
+        width: 25%;
+        text-align: center;
+        font-size: 30px;
+        color: black;
+        font-weight: 600;
+    }
+
+    /* Clase aplicada cuando gana el jugador */
+    .ganadorJugador {
+        background-color: #52b788;
+    }
+
+    /* Clase aplicada cuando gana la banca */
+    .ganadorBanca {
+        background-color: #dd6969;
+    }
+
+
+
+}
+
+/* FIN --> MEDIA PORTRAIT */

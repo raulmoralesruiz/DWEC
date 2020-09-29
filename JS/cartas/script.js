@@ -148,7 +148,7 @@ let historial_banca = [];
 let puntos_banca = 0;
 
 
-plantarse.addEventListener('click', (e) => {
+plantarse.addEventListener('click', jugada = (e) => {
 
     // se comprueba si el usuario ha jugado al menos una vez
     if (contador_jugadas == 0) {
@@ -163,56 +163,58 @@ plantarse.addEventListener('click', (e) => {
 
             // se agrega borde al tablero de la banca (mientras la banca juega)
             tablero_banca.classList.add('banca_activa');
-            
+
 
             //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
             contador_jugadas = limite_jugadas;
-    
+
             // Se comprueba si hay cartas en el mazo
             if (mazo.length <= 0) {
                 alert("No quedan cartas en el mazo.")
             } else {
-    
-                // se reparten todas las cartas necesarias para la banca
-                while (puntos_banca <= puntos_jugador) {
-    
-                    // Obtenemos la posición de la carta en el array (mazo)
-                    let posCartaEnMazo = numRandom(0, (mazo.length - 1));
-    
-                    // Sacamos la carta del mazo (array)
-                    // splice -> primer valor, indice a eliminar. Segundo valor, cantidad
-                    let carta = mazo.splice(posCartaEnMazo, 1);
-    
-                    // Mostramos la carta en el sitio indicado -> carta actual del jugador
-                    nuevaCartaBan.src = `imagenes/${carta}`;
-    
-                    // Se agrega la carta al array historial del jugador
-                    historial_banca.push(carta);
-    
-                    // Se inserta la carta en el historial del jugador
-                    document.getElementById(`img_cartaban_${historial_banca.length}`).src = `imagenes/${carta}`;
-    
-    
-                    // Se extrae el digito de la carta. (valores entre 1 y 10)
-                    let digitoCarta = parseInt(carta);
-                    let valorCarta = 0;
-    
-                    // Se guarda el valor de la carta
-                    if (digitoCarta >= 8) {
-                        valorCarta = 0.5;
-                    } else {
-                        valorCarta = digitoCarta;
-                    }
-    
-                    // Se incrementa la puntuación del jugador
-                    puntos_banca += valorCarta;
-                    div_puntos_banca.textContent = `${puntos_banca} puntos`;
-                }    
 
+                // Obtenemos la posición de la carta en el array (mazo)
+                let posCartaEnMazo = numRandom(0, (mazo.length - 1));
+
+                // Sacamos la carta del mazo (array)
+                // splice -> primer valor, indice a eliminar. Segundo valor, cantidad
+                let carta = mazo.splice(posCartaEnMazo, 1);
+
+                // Mostramos la carta en el sitio indicado -> carta actual del jugador
+                nuevaCartaBan.src = `imagenes/${carta}`;
+
+                // Se agrega la carta al array historial del jugador
+                historial_banca.push(carta);
+
+                // Se inserta la carta en el historial del jugador
+                document.getElementById(`img_cartaban_${historial_banca.length}`).src = `imagenes/${carta}`;
+
+
+                // Se extrae el digito de la carta. (valores entre 1 y 10)
+                let digitoCarta = parseInt(carta);
+                let valorCarta = 0;
+
+                // Se guarda el valor de la carta
+                if (digitoCarta >= 8) {
+                    valorCarta = 0.5;
+                } else {
+                    valorCarta = digitoCarta;
+                }
+
+                // Se incrementa la puntuación del jugador
+                puntos_banca += valorCarta;
+                div_puntos_banca.textContent = `${puntos_banca} puntos`;
+                
+
+                // se reparten todas las cartas necesarias para la banca.
+                if (puntos_banca <= puntos_jugador) {
+                    // delay de 1 segundo tras mostrar cada carta de la banca
+                    setTimeout(jugada, 1000);
+                }
 
                 // se comprueba quién es el ganador
-                if ((puntos_banca >= puntos_jugador) && (puntos_banca <= 7.5)) {
-                    
+                else if ((puntos_banca >= puntos_jugador) && (puntos_banca <= 7.5)) {
+
                     // si la banca gana, se termina el juego y se muestra por pantalla
                     ganador.textContent = `Ganador: BANCA`;
                     ganador.classList.add('ganadorBanca');
@@ -225,8 +227,8 @@ plantarse.addEventListener('click', (e) => {
                     juegoFinalizado = true;
                 }
             }
-    
-        // si el juego ya ha terminado, se muestra el aviso
+
+            // si el juego ya ha terminado, se muestra el aviso
         } else {
             alert("El juego ya ha finalizado.");
         }
