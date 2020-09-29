@@ -150,13 +150,6 @@ let puntos_banca = 0;
 
 plantarse.addEventListener('click', (e) => {
 
-    // se elimina borde del tablero del jugador (su turno ha finalizado)
-    tablero_jugador.classList.remove('jugador_activa');
-
-    // se agrega borde al tablero de la banca (mientras la banca juega)
-    tablero_banca.classList.add('banca_activa');
-
-
     // se comprueba si el usuario ha jugado al menos una vez
     if (contador_jugadas == 0) {
         alert("El jugador no puede plantarse sin jugar.");
@@ -164,7 +157,14 @@ plantarse.addEventListener('click', (e) => {
 
         // si el juego no ha terminado...
         if (juegoFinalizado == false) {
+
+            // se elimina borde del tablero del jugador (su turno ha finalizado)
+            tablero_jugador.classList.remove('jugador_activa');
+
+            // se agrega borde al tablero de la banca (mientras la banca juega)
+            tablero_banca.classList.add('banca_activa');
             
+
             //deshabilitar funcionalidad mazoJugador. (no se deben dar más cartas al jugador tras plantarse)
             contador_jugadas = limite_jugadas;
     
