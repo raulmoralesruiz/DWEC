@@ -282,7 +282,7 @@ body {
     /* Contenedor padre. Contiene jugador y banca */
     #general {
         width: 95%;
-        height: 100%;
+        height: 95%;
         /* display: flex; */
         flex-wrap: wrap;
         padding: 5px;
@@ -299,9 +299,11 @@ body {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        height: 550px;
+        /* height: 550px; */
+        height: 240px;
         padding: 10px;
         border-radius: 6px;
+        /* margin-bottom: 100px; */
     }
 
     /* Borde activo mientras el usuario juega */
@@ -311,7 +313,7 @@ body {
 
     /* Div que contiene texto y botones para el jugador */
     #menu_jugador {
-        height: 50px;
+        height: 35px;
         width: 100%;
         background-color: #b7e4c7;
         display: flex;
@@ -320,19 +322,19 @@ body {
 
     /* Div que muestra -> Total jugador */
     #texto_puntos_jugador {
-        width: 30%;
+        width: 25%;
         text-align: center;
-        font-size: 15px;
+        font-size: 10px;
         margin-top: 10px;
         font-weight: 600;
     }
 
     /* Div que muestra los puntos actuales del jugador */
     #valor_puntos_jugador {
-        width: 20%;
+        width: 25%;
         text-align: center;
         font-size: 15px;
-        margin-top: 10px;
+        margin-top: 5px;
         font-weight: 600;
     }
 
@@ -340,16 +342,18 @@ body {
     .div_botones {
         width: 25%;
         text-align: center;
-        font-size: 10px;
+        margin-top: -5px;
+
+        /* font-size: 10px; */
     }
 
     /* Formato de los botones */
     .botones {
-        margin-top: 10px;
+        /* margin-top: 10px; */
         width: 80%;
         font-size: 10px;
-        padding: 5px;
-        font-weight: 600;
+        /* padding: 5px; */
+        /* font-weight: 600; */
         color: #ffffff;
         background-color: #74c69d;
         border-radius: 6px;
@@ -364,7 +368,7 @@ body {
     /* Div que contiene el mazo del jugador (Pedir carta) */
     #jug_mazo {
         width: 50%;
-        height: 350px;
+        height: 120px;
         background-color: #74c69d;
         border-top-left-radius: 6px;
         border-bottom-left-radius: 6px;
@@ -372,23 +376,23 @@ body {
 
     /* Formato de la imagen del mazo del jugador */
     #img_mazo_jug {
-        max-width: 55%;
+        max-width: 45%;
         height: auto;
         display: block;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
     }
 
     #img_mazo_jug:hover {
-        margin-top: 20px;
-        max-width: 60%;
+        margin-top: 10px;
+        max-width: 45%;
     }
 
     /* Div que contiene la carta actual del jugador */
     #jug_nueva_carta {
         width: 50%;
-        height: 350px;
+        height: 120px;
         background-color: #52b788;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
@@ -397,16 +401,16 @@ body {
     /* Formato de la carta actual del jugador */
     #img_nueva_carta_jug {
         display: block;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
-        max-width: 100%;
+        max-width: 45%;
     }
 
     /* Div que contiene el historial de cartas del jugador */
     #jug_cartas {
         width: 100%;
-        height: 150px;
+        height: 80px;
         background-color: #2d6a4f;
         border-radius: 6px;
     }
@@ -414,9 +418,9 @@ body {
     /* Formato de cada carta del historial del jugador */
     .img_cartas_jug {
         margin-top: 10px;
-        max-width: 10%;
+        max-width: 15%;
         height: auto;
-        padding: 10px;
+        padding: 0px;
     }
 
     /* ------------------------ JUGADOR ------------------------ */
@@ -429,7 +433,8 @@ body {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        height: 550px;
+        /* height: 550px; */
+        height: 240px;
         padding: 10px;
         border-radius: 6px;
     }
@@ -441,7 +446,7 @@ body {
 
     /* Div que contiene texto para la banca */
     #menu_banca {
-        height: 50px;
+        height: 35px;
         width: 100%;
         background-color: #e4b1ab;
         display: flex;
@@ -452,7 +457,7 @@ body {
     #texto_puntos_banca {
         width: 25%;
         text-align: center;
-        font-size: 20px;
+        font-size: 10px;
         margin-top: 10px;
         font-weight: 600;
     }
@@ -461,15 +466,15 @@ body {
     #valor_puntos_banca {
         width: 25%;
         text-align: center;
-        font-size: 20px;
-        margin-top: 10px;
+        font-size: 15px;
+        margin-top: 5px;
         font-weight: 600;
     }
 
     /* Div que contiene el mazo de la banca (carta trasera) */
     #ban_mazo {
         width: 50%;
-        height: 350px;
+        height: 120px;
         background-color: #dd807e;
         border-top-left-radius: 6px;
         border-bottom-left-radius: 6px;
@@ -477,10 +482,10 @@ body {
 
     /* Formato de la imagen del mazo de la banca */
     #img_mazo_ban {
-        max-width: 55%;
+        max-width: 45%;
         height: auto;
         display: block;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -488,7 +493,7 @@ body {
     /* Div que contiene la carta actual de la banca */
     #ban_nueva_carta {
         width: 50%;
-        height: 350px;
+        height: 120px;
         background-color: #dd6969;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
@@ -497,15 +502,16 @@ body {
     /* Formato de la carta actual de la banca */
     #img_nueva_carta_ban {
         display: block;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
+        max-width: 45%;
     }
 
     /* Div que contiene el historial de cartas de la banca */
     #ban_cartas {
         width: 100%;
-        height: 150px;
+        height: 80px;
         background-color: #D84846;
         border-radius: 6px;
     }
@@ -513,9 +519,9 @@ body {
     /* Formato de cada carta del historial de la banca */
     .img_cartas_ban {
         margin-top: 10px;
-        max-width: 10%;
+        max-width: 15%;
         height: auto;
-        padding: 10px;
+        padding: 0px;
     }
 
     /* ------------------------- BANCA ------------------------- */
@@ -526,7 +532,7 @@ body {
     /* Div padre para -> Div ganador */
     #footer {
         width: 96%;
-        height: 70px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -534,9 +540,9 @@ body {
 
     /* Div que muestra el ganador de la partida */
     #ganador {
-        width: 25%;
+        width: 50%;
         text-align: center;
-        font-size: 30px;
+        font-size: 15px;
         color: black;
         font-weight: 600;
     }
