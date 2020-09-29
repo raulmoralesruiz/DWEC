@@ -285,7 +285,7 @@ body {
         height: 100%;
         /* display: flex; */
         flex-wrap: wrap;
-        padding: 10px;
+        padding: 5px;
         justify-content: center;
         align-items: center;
         /* background-color: chartreuse; */
@@ -322,7 +322,7 @@ body {
     #texto_puntos_jugador {
         width: 30%;
         text-align: center;
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 10px;
         font-weight: 600;
     }
@@ -331,7 +331,7 @@ body {
     #valor_puntos_jugador {
         width: 20%;
         text-align: center;
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 10px;
         font-weight: 600;
     }
@@ -340,14 +340,14 @@ body {
     .div_botones {
         width: 25%;
         text-align: center;
-        font-size: 20px;
+        font-size: 10px;
     }
 
     /* Formato de los botones */
     .botones {
         margin-top: 10px;
-        width: 70%;
-        font-size: 15px;
+        width: 80%;
+        font-size: 10px;
         padding: 5px;
         font-weight: 600;
         color: #ffffff;
