@@ -138,6 +138,11 @@ function cartaRandom() {
         // Se muestran los puntos del jugador en la posición correspondiente (div_puntos_jugador)
         div_puntos_jugador.textContent = `${puntos_jugador} puntos`;
     }
+
+    // Si el jugador obtiene la puntuación ideal, la banca comienza a jugar.
+    if (puntos_jugador == 7.5) {
+        plantarse.click();
+    }
 }
 
 
