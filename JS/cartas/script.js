@@ -207,7 +207,7 @@ plantarse.addEventListener('click', jugada = (e) => {
                 
 
                 // se reparten todas las cartas necesarias para la banca.
-                if (puntos_banca <= puntos_jugador) {
+                if (puntos_banca < puntos_jugador) {
                     // delay de 1 segundo tras mostrar cada carta de la banca
                     setTimeout(jugada, 1000);
                 }

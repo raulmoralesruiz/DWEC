@@ -282,11 +282,10 @@ body {
     /* Contenedor padre. Contiene jugador y banca */
     #general {
         width: 95%;
-        /* height: 100%; */
         /* display: flex; */
-        height: 90vh;
+        height: 87vh;
         flex-wrap: wrap;
-        padding: 5px;
+        padding: 1%;
         justify-content: center;
         align-items: center;
     }
@@ -299,8 +298,8 @@ body {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        height: 45%;
-        padding: 10px;
+        height: 48%;
+        padding: 2%;
         border-radius: 6px;
     }
 
@@ -322,8 +321,8 @@ body {
     #texto_puntos_jugador {
         width: 25%;
         text-align: center;
-        font-size: 10px;
-        margin-top: 10px;
+        font-size: 65%;
+        margin-top: 2%;
         font-weight: 600;
     }
 
@@ -332,7 +331,7 @@ body {
         width: 25%;
         text-align: center;
         font-size: 15px;
-        margin-top: 5px;
+        margin-top: 1%;
         font-weight: 600;
     }
 
@@ -351,6 +350,7 @@ body {
         background-color: #74c69d;
         border-radius: 6px;
         border: 2px solid #52b788;
+        padding: 2%;
     }
 
     .botones:hover {
@@ -369,17 +369,29 @@ body {
 
     /* Formato de la imagen del mazo del jugador */
     #img_mazo_jug {
-        max-width: 70%;
+        max-width: 68%;
         height: auto;
         display: block;
-        margin-top: 10px;
+        margin-top: 2%;
         margin-left: auto;
         margin-right: auto;
     }
 
     #img_mazo_jug:hover {
-        margin-top: 10px;
-        max-width: 70%;
+        margin-top: 2%;
+        max-width: 68%;
+    }
+
+    @media (min-height:790px){
+        #img_mazo_jug {
+            max-width: 75%;
+            margin-top: 2%;
+        }
+
+        #img_mazo_jug:hover {
+            max-width: 75%;
+            margin-top: 2%;
+        }    
     }
 
     /* Div que contiene la carta actual del jugador */
@@ -394,10 +406,17 @@ body {
     /* Formato de la carta actual del jugador */
     #img_nueva_carta_jug {
         display: block;
-        margin-top: 10px;
+        margin-top: 2%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 72%;
+        max-width: 70%;
+    }
+
+    @media (min-height:790px){
+        #img_nueva_carta_jug {
+            max-width: 78%;
+            margin-top: 2%;
+        } 
     }
 
     /* Div que contiene el historial de cartas del jugador */
@@ -411,10 +430,16 @@ body {
     /* Formato de cada carta del historial del jugador */
     .img_cartas_jug {
         margin-left: 5px;
-        margin-top: 15px;
+        margin-top: 3%;
         max-width: 14%;
         height: auto;
         padding: 0px;
+    }
+
+    @media (min-height:790px){
+        .img_cartas_jug {
+            margin-top: 5%;
+        } 
     }
 
     /* ------------------------ JUGADOR ------------------------ */
@@ -427,8 +452,8 @@ body {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        height: 45%;
-        padding: 10px;
+        height: 48%;
+        padding: 2%;
         border-radius: 6px;
     }
 
@@ -450,8 +475,8 @@ body {
     #texto_puntos_banca {
         width: 25%;
         text-align: center;
-        font-size: 10px;
-        margin-top: 10px;
+        font-size: 65%;
+        margin-top: 2%;
         font-weight: 600;
     }
 
@@ -460,7 +485,7 @@ body {
         width: 25%;
         text-align: center;
         font-size: 15px;
-        margin-top: 5px;
+        margin-top: 1%;
         font-weight: 600;
     }
 
@@ -475,12 +500,19 @@ body {
 
     /* Formato de la imagen del mazo de la banca */
     #img_mazo_ban {
-        max-width: 70%;
+        max-width: 68%;
         height: auto;
         display: block;
-        margin-top: 10px;
+        margin-top: 2%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @media (min-height:790px){
+        #img_mazo_ban {
+            max-width: 75%;
+            margin-top: 2%;
+        }
     }
 
     /* Div que contiene la carta actual de la banca */
@@ -495,10 +527,17 @@ body {
     /* Formato de la carta actual de la banca */
     #img_nueva_carta_ban {
         display: block;
-        margin-top: 10px;
+        margin-top: 2%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 72%;
+        max-width: 70%;
+    }
+
+    @media (min-height:790px){
+        #img_nueva_carta_ban {
+            max-width: 78%;
+            margin-top: 2%;
+        } 
     }
 
     /* Div que contiene el historial de cartas de la banca */
@@ -512,10 +551,16 @@ body {
     /* Formato de cada carta del historial de la banca */
     .img_cartas_ban {
         margin-left: 5px;
-        margin-top: 15px;
+        margin-top: 3%;
         max-width: 14%;
         height: auto;
         padding: 0px;
+    }
+
+    @media (min-height:790px){
+        .img_cartas_ban {
+            margin-top: 5%;
+        } 
     }
 
     /* ------------------------- BANCA ------------------------- */
@@ -525,7 +570,7 @@ body {
 
     /* Div padre para -> Div ganador */
     #footer {
-        margin-top: -10px;
+        margin-top: -2px;
         width: 96%;
         height: 5vh;
         display: flex;
@@ -545,11 +590,19 @@ body {
     /* Clase aplicada cuando gana el jugador */
     .ganadorJugador {
         background-color: #52b788;
+        border: 2px solid black;
     }
 
     /* Clase aplicada cuando gana la banca */
     .ganadorBanca {
         background-color: #dd6969;
+        border: 2px solid black;
+    }
+
+    @media (min-height:790px){
+        #footer {
+            margin-top: -8px;
+        }    
     }
 
 }/* FIN --> MEDIA PORTRAIT */
