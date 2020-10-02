@@ -163,6 +163,9 @@ plantarse.addEventListener('click', jugada = (e) => {
         // si el juego no ha terminado...
         if (juegoFinalizado == false) {
 
+            // se cambia la imagen del mazo jugador. (para que no aparezca pedir carta)
+            mazoJug.src = `imagenes/trasera.jpg`;
+
             // se elimina borde del tablero del jugador (su turno ha finalizado)
             tablero_jugador.classList.remove('jugador_activa');
 
