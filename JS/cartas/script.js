@@ -14,11 +14,13 @@ const tablero_jugador = document.getElementById('jugador');
 const mazoJug = document.getElementById('img_mazo_jug');
 const nuevaCartaJug = document.getElementById('img_nueva_carta_jug');
 const div_puntos_jugador = document.getElementById('valor_puntos_jugador');
+const cartasJugador = document.getElementById("jug_cartas");
 
 const tablero_banca = document.getElementById('banca');
 const mazoBan = document.getElementById('img_mazo_ban');
 const nuevaCartaBan = document.getElementById('img_nueva_carta_ban');
 const div_puntos_banca = document.getElementById('valor_puntos_banca');
+const cartasBanca = document.getElementById("ban_cartas");
 
 const ganador = document.getElementById('ganador');
 
@@ -117,9 +119,11 @@ function cartaRandom() {
         // Se agrega la carta al array historial del jugador
         historial_jugador.push(carta);
 
-        // Se inserta la carta en el historial del jugador
-        document.getElementById(`img_cartajug_${historial_jugador.length}`).src = `imagenes/${carta}`;
-
+        // Se inserta la carta en el historial del jugador. (Creación e inserción de imagen)
+        let nuevaImagen = document.createElement("img");
+        nuevaImagen.src = `imagenes/${carta}`;
+        nuevaImagen.setAttribute("class", "img_cartas_jug");
+        cartasJugador.appendChild(nuevaImagen);
 
         // Se extrae el digito de la carta
         let digitoCarta = parseInt(carta);
@@ -188,14 +192,18 @@ plantarse.addEventListener('click', jugada = (e) => {
                 // splice -> primer valor, indice a eliminar. Segundo valor, cantidad
                 let carta = mazo.splice(posCartaEnMazo, 1);
 
-                // Mostramos la carta en el sitio indicado -> carta actual del jugador
+                // Mostramos la carta en el sitio indicado -> carta actual de la banca
                 nuevaCartaBan.src = `imagenes/${carta}`;
 
-                // Se agrega la carta al array historial del jugador
+                // Se agrega la carta al array historial de la banca
                 historial_banca.push(carta);
 
-                // Se inserta la carta en el historial del jugador
-                document.getElementById(`img_cartaban_${historial_banca.length}`).src = `imagenes/${carta}`;
+                // Se inserta la carta en el historial de la banca. (Creación e inserción de imagen)
+                // document.getElementById(`img_cartaban_${historial_banca.length}`).src = `imagenes/${carta}`;
+                let nuevaImagen = document.createElement("img");
+                nuevaImagen.src = `imagenes/${carta}`;
+                nuevaImagen.setAttribute("class", "img_cartas_ban");
+                cartasBanca.appendChild(nuevaImagen);
 
 
                 // Se extrae el digito de la carta. (valores entre 1 y 10)
@@ -209,7 +217,7 @@ plantarse.addEventListener('click', jugada = (e) => {
                     valorCarta = digitoCarta;
                 }
 
-                // Se incrementa la puntuación del jugador
+                // Se incrementa la puntuación de la banca
                 puntos_banca += valorCarta;
                 div_puntos_banca.textContent = `${puntos_banca} puntos`;
                 
