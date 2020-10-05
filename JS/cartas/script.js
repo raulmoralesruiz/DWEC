@@ -23,7 +23,8 @@ const div_puntos_banca = document.getElementById('valor_puntos_banca');
 const cartasBanca = document.getElementById("ban_cartas");
 
 const ganador = document.getElementById('ganador');
-
+const padre_winner = document.getElementById('padre_winner');
+const winner = document.getElementById('winner');
 
 
 // Se define un array con los palos de la baraja
@@ -82,6 +83,9 @@ mazoJug.addEventListener('click', (e) => {
             ganador.textContent = `Ganador: BANCA`;
             ganador.classList.add('ganadorBanca');
             juegoFinalizado = true;
+
+            winner.textContent = `Ganador: BANCA`;
+            winner.classList.add('winnerActivo');
         }
 
     } else {

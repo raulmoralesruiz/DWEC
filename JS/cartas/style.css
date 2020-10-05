@@ -271,7 +271,22 @@ body {
 }
 /* ------------------------ GANADOR ------------------------ */
 
+/* #padre_winner {
+    background-color: aqua;
+} */
 
+.winnerActivo {
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+    z-index: 0;
+}
+
+/* #winner {
+    background-color: blueviolet;
+    width: 100%;
+    height: 100px;
+} */
 
 
 

@@ -1,0 +1,13 @@
+#fecha {
+    font-size: 30px;
+    color: teal;
+}
+
+.oculto {
+    display: none;
+}
+
+#alarma {
+    font-size: 100px;
+    color: darkslategray;
+}
