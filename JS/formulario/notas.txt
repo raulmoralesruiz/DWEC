@@ -1,0 +1,46 @@
+
+/* formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+});
+
+dni.addEventListener('change', (e) => {
+    let valorDni = e.target.value;
+    validateDni(valorDni);
+});
+
+email.addEventListener('change', (e) => {
+    let valorEmail = e.target.value;
+    validateEmail(valorEmail);
+});
+
+cuenta.addEventListener('change', (e) => {
+    let valorCuenta = e.target.value;
+    validateIban(valorCuenta);
+});
+
+usuario.addEventListener('change', (e) => {
+    let valorUsuario = e.target.value;
+    validateUsername(valorUsuario);
+});
+
+pass.addEventListener('change', (e) => {
+    let valorPass = e.target.value;
+    validatePasswordModerate(valorPass);
+    //hG8bcz@ymZC9^j
+});
+
+url.addEventListener('change', (e) => {
+    let valorUrl = e.target.value;
+    validateUrl(valorUrl);
+});
+
+ip.addEventListener('change', (e) => {
+    let valorIp = e.target.value;
+    validateIP(valorIp);
+});
+
+tarjeta.addEventListener('change', (e) => {
+    let valorTarjeta = e.target.value;
+    validateCreditCard(valorTarjeta);
+    //4507670001000009
+}); */

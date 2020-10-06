@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="general">
+
+        <div id="div-formulario">
+
+            <form id="formulario" action="" method="post">
+                <div id="form-head">
+                    <!-- <h1>Formulario</h1> -->
+                    Formulario
+                </div>
+
+                <div id="form-body">
+                    <div id="celda-dni" class="dato">
+                        <label id="label-dni" for="dni">DNI:</label>
+                        <input autofocus type="text" name="dni" id="dni" placeholder="Introduce DNI"></input>
+                        <!-- <input autofocus type="text" name="dni" id="dni" placeholder="Introduce DNI" required></input> -->
+                    </div>
+
+                    <div id="celda-email" class="dato">
+                        <label id="label-email" for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Introduce email"></input>
+                        <!-- <input type="email" name="email" id="email" placeholder="Introduce email" required></input> -->
+                    </div>
+
+                    <div id="celda-cuenta" class="dato">
+                        <label id="label-cuenta" for="cuenta">Cuenta bancaria:</label>
+                        <input type="text" name="cuenta" id="cuenta" placeholder="Introduce cuenta bancaria"></input>
+                        <!-- <input type="text" name="cuenta" id="cuenta" placeholder="Introduce cuenta bancaria"
+                            required></input> -->
+                    </div>
+
+                    <div id="celda-user" class="dato">
+                        <label id="label-usuario" for="usuario">Usuario:</label>
+                        <input type="text" name="usuario" id="usuario" placeholder="Introduce usuario"></input>
+                        <!-- <input type="text" name="usuario" id="usuario" placeholder="Introduce usuario" required></input> -->
+                    </div>
+
+                    <div id="celda-pass" class="dato">
+                        <label id="label-pass" for="pass">Contraseña:</label>
+                        <input type="password" name="pass" id="pass" placeholder="Introduce contraseña"></input>
+                    </div>
+
+                    <div id="celda-url" class="dato">
+                        <label id="label-url" for="url">URL:</label>
+                        <input type="url" name="url" id="url" placeholder="Introduce URL"></input>
+                    </div>
+
+                    <div id="celda-ip" class="dato">
+                        <label id="label-ip" for="ip">IP:</label>
+                        <input type="text" name="ip" id="ip" placeholder="Introduce IP"></input>
+                    </div>
+
+                    <div id="celda-tarjeta" class="dato">
+                        <label id="label-tarjeta" for="tarjeta">Tarjeta de crédito:</label>
+                        <input type="number" name="tarjeta" id="tarjeta"
+                            placeholder="Introduce tarjeta de crédito"></input>
+                    </div>
+
+                </div>
+
+                <div id="form-footer">
+                    <!-- <input type="submit" value="Enviar" id="submit"> -->
+                    <button type="submit" value="submit" id="submit">Enviar</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="validate.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
