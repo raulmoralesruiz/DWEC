@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#mando {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+}
+
+#plantarse {
+    width: 50%;
+    height: 5vh;
+}
+
+#reiniciar {
+    width: 50%;
+    height: 5vh;
+}
+
+.botones {
+    width: 100%;
+    height: 100%;
+
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #74c69d;
+    border: 2px solid #52b788;
+}
+
+.botones:hover {
+    color: #52b788;
+    background-color: #ffffff;
+}
+
+
+#jugador {
+    width: 100%;
+    height: 35vh;
+    background-color: #b7e4c7;
+}
+
+.img_cartas_jug {
+    margin-top: 10px;
+    max-width: 15%;
+    height: auto;
+    padding: 8px;
+}
+
+.panel_default {
+    width: 100%;
+    height: 25vh;
+    background-color: blueviolet;
+    display: flex;
+}
+
+#menu_jugador {
+    width: 33%;
+    height: 25vh;
+    background-color: cadetblue;
+    font-size: 25px;
+    text-align: center;
+}
+
+#valor_puntos_jugador {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#valor_puntos_banca {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.mazo_default {
+    width: 34%;
+    height: 25vh;
+    background-color: teal;
+
+    display: flex;
+    align-items: center;
+}
+
+.mazo_oculto {
+    display: none;
+}
+
+.ganador_jugador {
+    width: 34%;
+    height: 25vh;
+    background-color: #2d6a4f;
+    display: flex;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.ganador_banca {
+    width: 34%;
+    height: 25vh;
+    background-color: #D84846;
+    display: flex;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#img_mazo_jug {
+    max-width: 80%;
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+#menu_banca {
+    width: 33%;
+    height: 25vh;
+    background-color: cadetblue;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+#banca {
+    width: 100%;
+    height: 35vh;
+    background-color: #e4b1ab;
+}
+
+.img_cartas_ban {
+    margin-top: 10px;
+    max-width: 15%;
+    height: auto;
+    padding: 8px;
+}
+
+
+
+@media (orientation: landscape) {
+
+    #mando {
+        height: 10vh;
+    }
+
+    #plantarse {
+        height: 10vh;
+    }
+
+    #reiniciar {
+        height: 10vh;
+    }
+
+
+    #jugador {
+        height: 30vh;
+    }
+
+    #menu_jugador {
+        height: 30vh;
+    }
+
+    .panel_default {
+        height: 30vh;
+    }
+
+    .mazo_default {
+        height: 30vh;
+    }
+
+    #banca {
+        height: 30vh;
+    }
+
+
+    #menu_banca {
+        height: 30vh;
+    }
+
+
+
+    #img_mazo_jug {
+        max-width: 30%;
+    }
+
+    .img_cartas_jug {
+        margin-top: 0px;
+        max-width: 10%;
+    }
+
+    .img_cartas_ban {
+        margin-top: 0px;
+        max-width: 10%;
+    }
+
+    #menu_jugador {
+        font-size: 50px;
+    }
+
+    #valor_puntos_jugador {
+        font-size: 50px;
+    }
+
+    #menu_banca {
+        font-size: 50px;
+    }
+
+    #valor_puntos_banca {
+        font-size: 50px;
+    }
+
+    .botones {
+        font-size: 30px;
+    }
+
+    .ganador_jugador {
+        font-size: 60px;
+        height: 30vh;
+    }
+
+    .ganador_banca {
+        font-size: 60px;
+        height: 30vh;
+    }
+
+}
