@@ -23,8 +23,6 @@ const div_puntos_banca = document.getElementById('valor_puntos_banca');
 const cartasBanca = document.getElementById("ban_cartas");
 
 const ganador = document.getElementById('ganador');
-const padre_winner = document.getElementById('padre_winner');
-const winner = document.getElementById('winner');
 
 
 // Se define un array con los palos de la baraja
@@ -64,7 +62,7 @@ mazoJug.addEventListener('click', (e) => {
 
     // se agrega borde al tablero del jugador (mientras el usuario juega)
     tablero_jugador.classList.add('jugador_activa');
-    
+
     // se comprueba si el juego ha terminado
     if (juegoFinalizado == false) {
 
@@ -75,7 +73,7 @@ mazoJug.addEventListener('click', (e) => {
         } else {
             alert("Se ha alcanzado el máximo de jugadas posibles.");
         }
-    
+
         // si el jugador se pasa del límite de puntos
         if (puntos_jugador > 7.5) {
 
@@ -83,9 +81,6 @@ mazoJug.addEventListener('click', (e) => {
             ganador.textContent = `Ganador: BANCA`;
             ganador.classList.add('ganadorBanca');
             juegoFinalizado = true;
-
-            winner.textContent = `Ganador: BANCA`;
-            winner.classList.add('winnerActivo');
         }
 
     } else {
@@ -99,7 +94,7 @@ mazoJug.addEventListener('click', (e) => {
 
 // Función que calcula un número aleatorio, pasando como parámetro un valor mínimo y máximo
 function numRandom(min, max) {
-    return Math.floor((Math.random() * (max - min + 1)) + min); 
+    return Math.floor((Math.random() * (max - min + 1)) + min);
 }
 
 
@@ -224,7 +219,7 @@ plantarse.addEventListener('click', jugada = (e) => {
                 // Se incrementa la puntuación de la banca
                 puntos_banca += valorCarta;
                 div_puntos_banca.textContent = `${puntos_banca} puntos`;
-                
+
 
                 // se reparten todas las cartas necesarias para la banca.
                 if (puntos_banca < puntos_jugador) {
