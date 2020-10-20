@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel. Ejercicio 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Marvel</h1>
+
+    <div id="divAlig">
+        <!-- Desplegable. Alineamiento/orientación (bueno/neutral/malo) -->
+        <label for="alinea">Alignment:</label>
+        <select required name="alinea" id="alinea">
+            <option disabled selected value>Select alignment</option>
+        </select>
+    </div>
+
+
+    <div id="divGender">
+        <!-- Título radio -->
+        <label id="genero" for="gender">Gender:</label>
+
+        <!-- Opciones radio -->
+        <!-- <label><input name="gender" value="ejemplo1" type="radio">Ejemplo 1</label> -->
+        <div id="divRadio"></div>
+    </div>
+
+
+    <button id="button">Get Data</button>
+
+    <div id="divTabla">
+        <table id="tabla" class="oculto">
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Alignment</th>
+                <th>Fighting Skills</th>
+            </tr>
+        </table>
+    </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

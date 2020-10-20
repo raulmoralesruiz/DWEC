@@ -1,0 +1,42 @@
+h1{
+    color: darkslategray;
+}
+
+#divControl {
+    display: flex;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+#divTabla {
+    margin-top: 5%;
+    width: 98vw;
+    height: 50vh;
+    text-align: center;
+}
+
+#tabla {
+    width: 100%;
+    border: solid 2px black;
+}
+
+th {
+    background-color: darkslategray;
+    color: white;
+}
+
+.oculto {
+    display: none;
+}
+
+.celda {
+    color: darkslategray;
+}
