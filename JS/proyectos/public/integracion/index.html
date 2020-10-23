@@ -14,42 +14,30 @@
 
     <div id="div-formulario">
 
-        <!--
-        "idProduct": 0,
-        "title": "Senderos de gloria",
-        "categoria": "DRAMA",
-        "tipoContenido": "MOVIE",
-        "tipoSuscripcion": "PREMIUM"
-        -->
-
         <form action="">
 
+            <!-- Primera fila. Introducir ID + Buscar producto -->
             <label id="labId" for="id">ID:</label>
-
             <div id="divBuscar">
                 <input type="number" name="id" id="id" placeholder="Introduce id">
                 <button id="botonBuscar">Buscar producto</button>
             </div>
 
 
+            <!-- Segunda fila. Introducir Título -->
             <label id="labTitle" for="title">Title:</label>
             <input type="text" name="title" id="title" placeholder="Introduce título">
 
 
+            <!-- Tercera fila. Introducir Categoría -->
             <label id="labCategory" for="category">Category:</label>
-            <!-- <input type="text" name="category" id="category"> -->
             <select required name="category" id="selectCategory">
                 <option disabled selected value>Selecciona una opción</option>
-                <!--  <option value="SCIFI">Ciencia ficción</option>
-                <option value="DRAMA">Drama</option>
-                <option value="TERROR">Terror</option>
-                <option value="ACTION">Acción</option>
-                <option value="COMEDIA">Comedia</option> -->
             </select>
 
 
+            <!-- Cuarta fila. Introducir Tipo de contenido -->
             <label id="labTipeContent" for="tipeContent">Tipo de contenido:</label>
-            <!-- <input type="text" name="tipeContent" id="tipeContent"> -->
             <select required name="tipeContent" id="selectTipeContent">
                 <option disabled selected value>Selecciona una opción</option>
                 <option value="MOVIE">Película</option>
@@ -57,8 +45,8 @@
             </select>
 
 
+            <!-- Quinta fila. Introducir Tipo de suscripción -->
             <label id="labTipeSuscription" for="tipeSuscription">Tipo de suscripción:</label>
-            <!-- <input type="text" name="tipeSuscription" id="tipeSuscription"> -->
             <select required name="tipeSuscription" id="selectTipeSuscription">
                 <option disabled selected value>Selecciona una opción</option>
                 <option value="BASIC">Básica</option>
@@ -70,14 +58,15 @@
     </div>
 
 
-
+    <!-- Botones para interactuar con el formulario -->
     <div id="divBotones">
         <button id="botonListado">Mostrar listado</button>
-        <button id="botonCrearPeli">Crear Película</button>
+        <button id="botonCrearProducto">Crear producto</button>
+        <button id="botonReset">Reset</button>
     </div>
 
 
-
+    <!-- Tabla que mostrará el listado de productos -->
     <div id="divTablaListado">
         <table id="tablaListado" class="oculto">
             <tr>
@@ -87,44 +76,8 @@
                 <th>Tipe content</th>
                 <th>Tipe suscription</th>
             </tr>
-            <!-- <tr>
-                <td>1</td>
-                <td>senderos</td>
-                <td>drama</td>
-                <td>peli</td>
-                <td>premium</td>
-            </tr> -->
         </table>
     </div>
-
-
-    <!-- <div id="divAlig">
-        <label for="alinea">Alignment:</label>
-        <select required name="alinea" id="alinea">
-            <option disabled selected value>Select alignment</option>
-        </select>
-    </div>
-
-
-    <div id="divGender">
-        <label id="genero" for="gender">Gender:</label>
-
-        <div id="divRadio"></div>
-    </div>
-
-
-    <button id="button">Get Data</button>
-
-    <div id="divTabla">
-        <table id="tabla" class="oculto">
-            <tr>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Alignment</th>
-                <th>Fighting Skills</th>
-            </tr>
-        </table>
-    </div> -->
 
 
     <script type="text/javascript" src="script.js"></script>
