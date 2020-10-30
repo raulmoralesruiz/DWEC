@@ -1,0 +1,2 @@
+sessionStorage mantiene un área de almacenamiento mientras el navegador esté abierto, incluyendo recargas de página.
+localStorage hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
