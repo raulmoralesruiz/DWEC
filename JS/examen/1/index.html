@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen EJ1 - Raúl Morales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="general">
+
+        <div id="div-formulario">
+
+            <form id="formulario" action="" method="post">
+                <div id="form-head">
+                    EXAMEN EJ1
+                </div>
+
+                <div id="form-body">
+
+                    <div id="celda-nick" class="dato">
+                        <label id="label-nick" for="nick">Nickname:</label>
+                        <input autofocus type="text" name="nick" id="nick" placeholder="Introduce nickname"
+                            class="input-field"></input>
+
+                        <div id="celda-nombre" class="dato">
+                            <label id="label-nombre" for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Introduce nombre"
+                                class="input-field"></input>
+                        </div>
+
+                        <div id="celda-pass" class="dato">
+                            <label id="label-pass" for="pass">Contraseña: aAu6VR3cHQAGq2C</label>
+                            <input type="password" name="pass" id="pass" placeholder="Introduce contraseña"
+                                class="input-field"></input>
+                        </div>
+
+                        <div id="celda-dni" class="dato">
+                            <label id="label-dni" for="dni">DNI:</label>
+                            <input type="text" name="dni" id="dni" placeholder="Introduce dni"
+                                class="input-field"></input>
+                        </div>
+
+                        <div id="celda-edad" class="dato">
+                            <label id="label-edad" for="edad">Edad:</label>
+                            <input type="text" name="edad" id="edad" placeholder="Introduce edad"
+                                class="input-field"></input>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div id="form-footer">
+                    <input type="button" value="Consultar" id="btGet" class="botones btExtra">
+                    <button type="submit" value="submit" id="submit" class="botones btExtra">Registra</button>
+                    <input type="button" value="Last" id="btLast" class="botones btExtra">
+                    <input type="button" value="Borrar datos" id="borrarTodo" class="botones btExtra">
+                    <input type="button" value="Limpiar" id="btLimpiar" class="botones btExtra">
+                </div>
+
+            </form>
+
+            <div id="divTabla">
+                <table id="tabla" class="oculto">
+                    <!-- <table id="tabla"> -->
+                    <tr>
+                        <th>Nickname</th>
+                        <th>Nombre</th>
+                        <th>Contraseña</th>
+                        <th>DNI</th>
+                        <th>Edad</th>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="validate.js"></script> -->
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
