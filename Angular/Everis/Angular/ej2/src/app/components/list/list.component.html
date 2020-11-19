@@ -1,0 +1,17 @@
+<div class="card-columns">
+    <!-- for pinta todas las tarjetas -->
+    <div *ngFor="let country of listaData; let i = index" class="card">
+        <figure>
+            <img [src]="country.flag" class="card-img-top" alt="Flag of {{country.name}}">
+        </figure>
+        <div class="card-body">
+            <h5 class="card-title">{{ i }} - {{ country.name }}</h5>
+            <div>
+                <span class="badge badge-success" *ngFor="let language of country.languages">
+                    {{ language.name }}
+                </span>
+            </div>
+            <p class="card-text"><small class="text-muted">{{ country.capital }}</small></p>
+        </div>
+    </div>
+</div>

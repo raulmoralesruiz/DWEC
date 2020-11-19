@@ -1,0 +1,39 @@
+<div class="container">
+
+    <!-- Si la lista es listGlobal, se muestran los datos globales -->
+    <div *ngIf="listGlobal">
+        <div class="card-columns">
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Global</div>
+
+                <div class="card-body text-secondary">
+                    <h5>Información:</h5>
+
+                    <p>Confirmados: {{ listGlobal.NewConfirmed }} - {{ listGlobal.TotalConfirmed }}</p>
+                    <p>Muertos: {{ listGlobal.NewDeaths }} - {{ listGlobal.TotalDeaths }}</p>
+                    <p>Recuperados: {{ listGlobal.NewRecovered }} - {{ listGlobal.TotalRecovered }}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Si la lista es listSpain, se muestran los datos de España -->
+    <div *ngIf="listSpain">
+        <div class="card-columns" *ngFor="let global of listSpain">
+            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Spain</div>
+
+                <div class="card-body text-secondary">
+                    <h5>Información:</h5>
+
+                    <p>Confirmados: {{ global.NewConfirmed }} - {{ global.TotalConfirmed }}</p>
+                    <p>Muertos: {{ global.NewDeaths }} - {{ global.TotalDeaths }}</p>
+                    <p>Recuperados: {{ global.NewRecovered }} - {{ global.TotalRecovered }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

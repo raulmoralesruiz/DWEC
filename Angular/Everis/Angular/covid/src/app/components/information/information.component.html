@@ -1,0 +1,18 @@
+<div class="container">
+
+    <!-- Se recorre la lista de datos de países y se muestran los datos -->
+    <div class="card-columns" *ngFor="let country of listCountries">
+        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{ country.Country }}</div>
+
+            <div class="card-body text-secondary">
+                <h5>Información:</h5>
+
+                <p>Confirmados: {{ country.NewConfirmed }} - {{ country.TotalConfirmed }}</p>
+                <p>Muertos: {{ country.NewDeaths }} - {{ country.TotalDeaths }}</p>
+                <p>Recuperados: {{ country.NewRecovered }} - {{ country.TotalRecovered }}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

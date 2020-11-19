@@ -1,0 +1,16 @@
+<div class="card-columns">
+    <!-- Se recorre el listado de héroes -->
+    <div *ngFor="let h of heroes" class="card border-secondary mb-3" style="max-width: 18rem;">
+
+        <!-- Se muestra el nombre en el título de la tarjeta -->
+        <div class="card-header">{{ h.nombre }}</div>
+        <div class="card-body text-secondary">
+            <!-- Se inserta la biografía -->
+            <p class="card-text">{{ h.bio }}</p>
+            <!-- Se inserta la fecha y casa -->
+            <p>{{ h.aparicion }} - {{ h.casa }}</p>
+            <!-- Se envía el nombre del héroe al controlador padre -->
+            <button type="button" class="btn btn-info" (click)="sendHero( h.nombre )">Me gusta</button>
+        </div>
+    </div>
+</div>

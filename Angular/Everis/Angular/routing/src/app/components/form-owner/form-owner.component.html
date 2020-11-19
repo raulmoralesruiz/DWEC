@@ -1,0 +1,41 @@
+<div class="container">
+
+    <form #ownerForm="ngForm" (ngSubmit)="submit()" class="form-group">
+
+        <label for="firstName">Nombre</label>
+        <input type="text" required [(ngModel)]="owner.firstName" name="firstName" class="form-control" #firstName="ngModel">
+        <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+            Nombre no válido
+        </div>
+        <br>
+    
+        <label for="lastName">Apellido</label>
+        <input type="text" required [(ngModel)]="owner.lastName" name="lastName" class="form-control" #lastName="ngModel">
+        <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+            Apellido no válido
+        </div>
+        <br>
+    
+        <label for="address">Dirección</label>
+        <input type="text" required [(ngModel)]="owner.address" name="address" class="form-control" #address="ngModel">
+        <div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+            Dirección no válida
+        </div>
+        <br>
+    
+        <label for="telephone">Teléfono</label>
+        <input type="text" [(ngModel)]="owner.telephone" name="telephone" class="form-control">
+        <br>
+    
+        <label for="city">Ciudad</label>
+        <input type="text" required [(ngModel)]="owner.city" name="city" class="form-control" #city="ngModel">
+        <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+            Ciudad no válida
+        </div>
+    
+        <br>
+        <button type="submit" [disabled]="!ownerForm.valid" class="btn btn-primary">Submit</button>
+
+    </form>
+
+</div>

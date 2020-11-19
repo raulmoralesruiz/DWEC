@@ -1,0 +1,6 @@
+<div class="container">
+  <!-- Título + nombre del héroe seleccionado -->
+  <h1>El súperheroe que me gusta es {{ heroFavName }}</h1>
+  <!-- Listado de héroes, incluyendo método para recoger nombre del héroe -->
+  <app-heroes [heroes]="heroes" (sendQuery)="setName( $event )"></app-heroes>
+</div>

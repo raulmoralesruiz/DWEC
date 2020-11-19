@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+
+  <!-- Si este botón es pulsado, se activa la lista de países -->
+  <a routerLink="/countries">
+    <button type="button" class="btn btn-info" (click)="setActive('countries')">Countries</button>
+  </a>
+
+  <!-- Si este botón es pulsado, se activa la lista global/spain -->
+  <a routerLink="/global">
+    <button type="button" class="btn btn-info" (click)="setActive('global')">Global / Spain</button>
+  </a>
+
+</div>
+<br>
+
+
+<div class="container">
+
+  <!-- Si el botón global es pulsado, se muestra esta lista -->
+  <div *ngIf="active == 'global'">
+    <app-global [listGlobal]="global"></app-global>
+    <app-global [listSpain]="spain"></app-global>
+  </div>
+
+  <!-- Si el botón countries es pulsado, se muestra esta lista -->
+  <div *ngIf="active == 'countries'">
+    <app-information [listCountries]="countries"></app-information>
+  </div>
+
+</div>
