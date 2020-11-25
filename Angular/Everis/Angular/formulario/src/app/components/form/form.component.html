@@ -1,0 +1,44 @@
+<div class="container">
+
+    <h1>Validación de Formulario</h1>
+    <h4>Raúl Morales Ruiz</h4>
+
+    <form [formGroup]="formulario">
+
+        <!-- Nombre. No validado -->
+        <div class="form-group">
+            <label for="firstName">Nombre</label>
+            <input type="text" formControlName="userName" name="firstName" class="form-control">
+        </div>
+
+        <!-- Correo. Validado -->
+        <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" class="form-control" formControlName="userEmail"
+                [class.is-invalid]="formulario.get('userEmail').touched && formulario.get('userEmail').invalid">
+            <div class="alert alert-danger"
+                [hidden]="formulario.get('userEmail').pristine || formulario.get('userEmail').valid">
+                Correo electrónico no válido
+            </div>
+        </div>
+
+        <!-- Términos. Validado -->
+        <div class="form-group form-check">
+            <input type="checkbox" name="terms" class="form-check-input" formControlName="userTerms"
+                [class.is-invalid]="formulario.get('userTerms').touched && formulario.get('userTerms').invalid">
+            <label for="terms" class="form-check-label">Términos y condiciones</label>
+            <div class="alert alert-danger"
+                [hidden]="formulario.get('userTerms').pristine || formulario.get('userTerms').valid">
+                Los términos y condiciones son obligatorios
+            </div>
+        </div>
+
+        <button type="submit" [disabled]="!formulario.valid" class="btn btn-info">Submit</button>
+
+    </form>
+
+    <br>
+    <p>Hoy es {{ fecha | date:'fullDate' }}</p>
+    <p>Número de ejemplo: {{ number | number }} (también en formato español)</p>
+
+</div>
