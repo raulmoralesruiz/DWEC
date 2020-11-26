@@ -1,0 +1,17 @@
+<p-menubar [model]="items" id="navBar">
+
+    <ng-template pTemplate="start">
+        <a routerLink="/">
+            <button pButton icon="pi pi-home" type="button" label="Inicio"></button>
+        </a>
+    </ng-template>
+
+    <input type="text" pInputText placeholder="Search" [(ngModel)]="searchInput">
+    <button pButton icon="pi pi-search" [routerLink]="['search/',searchInput]"></button>
+</p-menubar>
+
+
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

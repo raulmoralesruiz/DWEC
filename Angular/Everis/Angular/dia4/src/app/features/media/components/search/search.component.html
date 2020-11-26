@@ -1,0 +1,24 @@
+<div *ngIf="mediaSearch">
+
+    <div *ngFor="let media of mediaSearch" class="p-grid">
+
+        <div class="p-col-6 p-text-center">
+            <p-card [header]="media.Title" [style]="{'margin-top': '2em'}">
+                <ng-template pTemplate="header">
+                    <a [routerLink]="['/search/title/',media.imdbID]">
+                        <img alt="Card" [src]="media.Poster" class="p-shadow-22">
+                    </a>
+                </ng-template>
+                <p>Year: {{ media.Year }}</p>
+                <p>imdbID: {{ media.imdbID }}</p>
+                <p>Type: {{ media.Type }}</p>
+            </p-card>
+        </div>
+    </div>
+
+</div>
+
+
+<div *ngIf="mediaSearch === undefined">
+    <h1>No se encuentra el título introducido</h1>
+</div>

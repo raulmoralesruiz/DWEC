@@ -1,0 +1,19 @@
+<div *ngIf="mediaSearch" class="p-flex">
+
+    <p-card [header]="mediaSearch.Title" [style]="{'width': '35rem', 'margin': '0 auto', 'margin-top': '2em'}">
+        <ng-template pTemplate="header">
+            <img alt="Card" [src]="mediaSearch.Poster">
+        </ng-template>
+        <p>Released: {{ mediaSearch.Released | date:'fullDate' }}</p>
+        <p>Actors: {{ mediaSearch.Actors }}</p>
+        <p>Country: {{ mediaSearch.Country }}</p>
+        <p>Type: {{ mediaSearch.Type }}</p>
+        <p>Rating: {{ mediaSearch.imdbRating }}</p>
+    </p-card>
+
+</div>
+
+
+<div *ngIf="mediaSearch === undefined">
+    <h1>No se encuentra el título introducido</h1>
+</div>
